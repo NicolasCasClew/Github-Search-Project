@@ -9,8 +9,11 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class GithubService {
+  
 
   private username: string;
+  private client_id = '72dc4bfd53d626dd67aa';
+  private client_secret = 'd78e4a1bc4519cd2ab379237d8f01ef368527728';
 
   constructor(private _http: HttpClient) {
     this.username = "nicolascasclew"
@@ -19,7 +22,7 @@ export class GithubService {
 
    getUser(){
     console.log("owo")
-    return this._http.get('https://api.github.com/users/'+this.username)
+    return this._http.get('https://api.github.com/users/'+this.username+ "?client_id=" + this.client_id + "&client_secret=" + this.client_secret)
     .pipe(map(data => data));
       
    /* console.log("????")
@@ -28,8 +31,14 @@ export class GithubService {
 
   getRepos(){
     console.log('https://api.github.com/users/'+this.username+'/repos')
-    return this._http.get('https://api.github.com/users/'+this.username+'/repos')
+    return this._http.get('https://api.github.com/users/'+this.username+'/repos'+ "?client_id=" + this.client_id + "&client_secret=" + this.client_secret)
     .pipe(map(data=>data));
 
+    // secret = d78e4a1bc4519cd2ab379237d8f01ef368527728
+
+}
+
+updateUser(username: string) {
+ this.username = username;
 }
 }

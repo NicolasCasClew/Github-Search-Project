@@ -13,8 +13,25 @@ export class ProfileComponent implements OnInit { // quitar OnIni si falla
   public user: any = [];
   public repos: any = [];
 
+  public username: string = '' //????
+
 constructor(private _githubService: GithubService){
-   this._githubService.getUser().subscribe(user =>{
+   this.user=false 
+   /* this._githubService.getUser().subscribe(user =>{
+    console.log(user)
+    this.user = user;
+  }) 
+
+  this._githubService.getRepos().subscribe(repos =>{
+    console.log(repos)
+    this.repos = repos;
+  }) */
+}
+
+searchUser(){
+  this._githubService.updateUser(this.username);
+
+  this._githubService.getUser().subscribe(user =>{
     console.log(user)
     this.user = user;
   }) 

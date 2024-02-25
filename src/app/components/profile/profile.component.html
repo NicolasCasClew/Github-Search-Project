@@ -1,4 +1,23 @@
-<h1 *ngIf="!user">Aqui no hay nada bucanero</h1>
+<div class="row">
+  <div class="col-md-10">
+    <form action="">
+      <div class="">
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          [(ngModel)]="username"
+          placeholder="Buscar en github..."
+        />
+      </div>
+    </form>
+  </div>
+  <div class="col-md-2">
+    <button class="form-control" (click)="searchUser()">Buscar</button>
+  </div>
+</div>
+<br /><br />
+<h1 class="text-center" *ngIf="!user">Aqui no hay nada bucanero</h1>
 <div *ngIf="user">
   <div class="card mb-3">
     <div class="row g-0">
