@@ -8,12 +8,14 @@ import { GithubService } from 'src/app/services/github/github.service';
 })
 export class ProfileComponent implements OnInit { // quitar OnIni si falla
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    //throw new Error('Method not implemented.'); Nu-hu
   }
+  public user: any = [];
 
 constructor(private _githubService: GithubService){
   this._githubService.getUser().subscribe(user =>{
     console.log(user)
+    this.user = user;
   })
 }
 
