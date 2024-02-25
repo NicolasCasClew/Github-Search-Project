@@ -13,7 +13,7 @@ Clona el proyecto
 Ve al directorio del proyecto
 
 ```bash
-  cd my-project
+  cd Github-Search-Project
 ```
 
 Instala las dependencias
