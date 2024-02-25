@@ -9,4 +9,6 @@ import { GithubService } from './services/github/github.service';
 })
 export class AppComponent {
   title = 'GitHub Searcher';
+  
 }
+
