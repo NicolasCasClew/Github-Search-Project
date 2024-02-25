@@ -19,7 +19,7 @@ export class GithubService {
 
    getUser(){
     console.log("owo")
-    return this._http.get('http://api.github.com/users/'+this.username)
+    return this._http.get('https://api.github.com/users/'+this.username)
     .pipe(map(data => data));
       
    /* console.log("????")
@@ -27,7 +27,8 @@ export class GithubService {
 }
 
   getRepos(){
-    return this._http.get('http://api.github.com/users/'+this.username+'/repos')
+    console.log('https://api.github.com/users/'+this.username+'/repos')
+    return this._http.get('https://api.github.com/users/'+this.username+'/repos')
     .pipe(map(data=>data));
 
 }
