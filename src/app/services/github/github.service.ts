@@ -25,4 +25,10 @@ export class GithubService {
    /* console.log("????")
    return this._http.get('http://api.github.com/users/'+this.username) */
 }
+
+  getRepos(){
+    return this._http.get('http://api.github.com/users/'+this.username+'/repos')
+    .pipe(map(data=>data));
+
+}
 }
