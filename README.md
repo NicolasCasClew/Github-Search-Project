@@ -4,25 +4,25 @@ Herramienta para buscar usuarios en Github
 
 ## Como instalar localmente
 
-Clone the project
+Clona el proyecto
 
 ```bash
   git clone https://github.com/NicolasCasClew/Github-Search-Project.git
 ```
 
-Go to the project directory
+Ve al directorio del proyecto
 
 ```bash
   cd my-project
 ```
 
-Install dependencies
+Instala las dependencias
 
 ```bash
   npm install
 ```
 
-Start the server
+Arranca el servidor
 
 ```bash
   ng serve --open
