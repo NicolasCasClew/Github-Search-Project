@@ -56,4 +56,30 @@
       </div>
     </div>
   </div>
+
+  <div class="card mb-3">
+    <h4 class="card-title p-2 ms-2">Repositories</h4>
+    <ul class="list-group list-group-flush">
+      <div *ngFor="let repo of repos">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-md-9">
+              <h5>
+                <a
+                  href="{{ repo.html_url }}"
+                  class="link-underline-opacity-0 link-underline-opacity-50-hover link-secondary ms-3"
+                  >{{ repo.name }}</a
+                >
+              </h5>
+              <p *ngIf="repo.description">{{ repo.description }}</p>
+            </div>
+            <div class="col-md-3">
+              <span class="badge bg-primary">{{ repo.watchers }} watchers</span>
+              <span class="badge bg-success ms-1">{{ repo.forks }} forks</span>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
 </div>
