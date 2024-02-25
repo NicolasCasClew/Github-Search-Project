@@ -7,17 +7,18 @@
           class="form-control"
           name="username"
           [(ngModel)]="username"
-          placeholder="Buscar en github..."
+          placeholder="Search github user..."
+          (keyup.enter)="searchUser()"
         />
       </div>
     </form>
   </div>
   <div class="col-md-2">
-    <button class="form-control" (click)="searchUser()">Buscar</button>
+    <button class="form-control" (click)="searchUser()">Search</button>
   </div>
 </div>
 <br /><br />
-<h1 class="text-center" *ngIf="!user">Aqui no hay nada bucanero</h1>
+<h1 class="text-center" *ngIf="!user">There's nothing here...</h1>
 <div *ngIf="user">
   <div class="card mb-3">
     <div class="row g-0">
