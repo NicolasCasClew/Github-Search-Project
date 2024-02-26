@@ -19,7 +19,7 @@ Ve al directorio del proyecto
 Instala las dependencias
 
 ```bash
-  npm install
+  npm install --force
 ```
 
 Arranca el servidor
